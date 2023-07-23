@@ -1,0 +1,52 @@
+.filters-group-container {
+  margin-top: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .filters-group-container {
+    width: 30%;
+    max-width: 350px;
+    margin-top: 48px;
+    flex-shrink: 0;
+  }
+}
+.search-container {
+  border: 1px solid lightgray;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+}
+.category-list-container {
+  list-style-type: none;
+  padding-left: 0px;
+}
+.category-list-container li {
+  margin-top: 10px;
+}
+input {
+  border: none;
+}
+/* Write your CSS here */
+.rating-list-container {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.rating-list-container li > img {
+  height: 20px;
+  width: 100px;
+}
+
+.category-list-container li > .category-item {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.rating-list-container li {
+  display: flex;
+  align-items: center;
+}
