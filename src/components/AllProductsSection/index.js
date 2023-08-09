@@ -228,12 +228,10 @@ class AllProductsSection extends Component {
           changeCategory={this.changeCategory}
           changeSearch={this.changeSearch}
           clearAllFilterState={this.clearAllFilterState}
-          titleSearch={this.titleSearch}
+          titleSearch={titleSearch}
         />
 
         {this.selectOptions()}
-
-        {/*     {isLoading ? this.renderLoader() : this.renderProductsList()} */}
       </div>
     )
   }

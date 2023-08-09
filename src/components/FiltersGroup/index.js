@@ -17,6 +17,7 @@ const FiltersGroup = props => {
   const changeSearchInputText = event => {
     //  const {changeSearch} = props
     if (event.key === 'Enter') {
+      console.log('Enter key evet Triggered')
       changeSearch(event.target.value)
     }
   }
