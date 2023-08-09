@@ -175,9 +175,9 @@ class AllProductsSection extends Component {
         src="https://assets.ccbp.in/frontend/react-js/nxt-trendz/nxt-trendz-no-products-view.png"
         alt="no products"
       />
-      <p>No Products Found</p>
+      <h1>No Products Found</h1>
 
-      <p>We could not find any products. Try other filters</p>
+      <p>We could not find any products. Try other filters.</p>
     </div>
   )
 
@@ -216,6 +216,7 @@ class AllProductsSection extends Component {
   }
 
   render() {
+    const {titleSearch} = this.state
     return (
       <div className="all-products-section">
         {/* TODO: Update the below element */}
@@ -227,6 +228,7 @@ class AllProductsSection extends Component {
           changeCategory={this.changeCategory}
           changeSearch={this.changeSearch}
           clearAllFilterState={this.clearAllFilterState}
+          titleSearch={this.titleSearch}
         />
 
         {this.selectOptions()}

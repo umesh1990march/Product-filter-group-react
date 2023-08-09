@@ -2,10 +2,10 @@ import './index.css'
 import {BiSearch} from 'react-icons/bi'
 
 const FiltersGroup = props => {
-  const {categoryList, ratingList} = props
+  const {categoryList, ratingList, changeSearch, titleSearch} = props
   const changeCategoryStatus = cate => {
     const {changeCategory} = props
-    console.log(cate)
+    // console.log(cate)
     changeCategory(cate)
   }
 
@@ -15,7 +15,7 @@ const FiltersGroup = props => {
   }
 
   const changeSearchInputText = event => {
-    const {changeSearch} = props
+    //  const {changeSearch} = props
     if (event.key === 'Enter') {
       changeSearch(event.target.value)
     }
@@ -26,12 +26,18 @@ const FiltersGroup = props => {
     clearAllFilterState()
   }
 
+  const changeSearchValue = event => {
+    changeSearch(event.target.value)
+  }
+
   return (
     <div className="filters-group-container">
       <div className="search-container">
         <input
           type="search"
           placeholder="Search"
+          value={titleSearch}
+          onChange={changeSearchValue}
           onKeyDown={changeSearchInputText}
         />
         <BiSearch />
